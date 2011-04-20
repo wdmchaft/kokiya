@@ -1,12 +1,20 @@
 function postComment() {
-	var currentComment= document.getElementById("comment").value;
-	alert(currentComment);
+
+//	alert(currentComment);
 	createXMLHttpRequest();
+        var url="result.php?timeStamp="+new Date().getTime();
+        var queryString = createQueryString();
+	xmlHttp.open("POST",url,true);
 	xmlHttp.onreadystatechange = letsgo;
-	xmlHttp.open("get","result.php?comment=klklklklk",true);
-	xmlHttp.send(null);
+        xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+	xmlHttp.send(queryString);
 }
 
+function createQueryString(){
+  	var currentComment= document.getElementById("comment").value;
+        var queryString = "comment="+currentComment;
+        return queryString;
+}
 var blackboard=document.getElementByID("blackboard");
 
 function letsgo() {
