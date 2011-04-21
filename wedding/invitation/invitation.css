@@ -1,0 +1,67 @@
+/* CSS Document */
+
+div#widget0 .navbar {
+	font-family: Arial, sans-serif;
+	font-size: 1em;
+	color: #666;
+	margin: 9px 0px 6px 0px;
+	line-height: 30px;
+}
+.navbar {
+	margin-bottom:-50px;
+}
+div#widget0 .navbar-bg {
+	text-align: center;
+}
+div#widget0 .navbar-bg ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+ul, menu, dir {
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
+}
+#widget0 a:hover {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+#widget0 a:visited {
+	color: rgb(121, 121, 121);
+	text-decoration: none;
+}
+#widget0 a {
+	color: rgb(88, 77, 77);
+	text-decoration: none;
+}
+.current-page {
+	font-weight:bold;
+}
+#widget0-navbar-list li {
+	display:inline;
+	padding:0.6em;
+}
+.invip {
+	float:right;
+	margin:-10px;
+	padding:0px;
+/*	background-color:#069;
+	color:#FFF;*/
+}
+#invitation {
+	margin:0px;
+	padding:0px;
+	position:relative;
+	left:173px;
+	font:Arial, Helvetica, sans-serif;
+	display:none;
+}
+#inviname {
+	font:Arial, Helvetica, sans-serif;
+	text-align:center;
+	color:#CCC;
+	border-color::#333;
+}
