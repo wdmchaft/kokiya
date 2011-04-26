@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:FDA2A825-3108-4119-8FDD-9C3E39D61717</id>
+ <title>Page list Atom feed</title>
+ <updated>2011-04-03T01:09:00+08:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:C1CF9554-4C97-434A-9569-C3AC8321A454</id>
+  <title>HOME</title>
+  <title xmlns="urn:iweb:">HOME</title>
+  <in-navbar xmlns="urn:iweb:">C1CF9554-4C97-434A-9569-C3AC8321A454</in-navbar>
+  <link rel="alternate" href="HOME.html"/>
+  <updated>2011-04-03T01:09:00.001+08:00</updated>
+  <content>HOME</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:7614369A-9BDB-4FC3-91CE-3A4A52ADB2E8</id>
+  <title>欢迎</title>
+  <title xmlns="urn:iweb:">欢迎</title>
+  <in-navbar xmlns="urn:iweb:">7614369A-9BDB-4FC3-91CE-3A4A52ADB2E8</in-navbar>
+  <link rel="alternate" href="huan_ying.html"/>
+  <updated>2011-04-03T01:09:00.002+08:00</updated>
+  <content>欢迎</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:227196AA-6FC7-4FF6-83DB-FB5BD2636A65</id>
+  <title>照片</title>
+  <title xmlns="urn:iweb:">照片</title>
+  <in-navbar xmlns="urn:iweb:">227196AA-6FC7-4FF6-83DB-FB5BD2636A65</in-navbar>
+  <link rel="alternate" href="zhao_pian.html"/>
+  <updated>2011-04-03T01:09:00.003+08:00</updated>
+  <content>照片</content>
+ </entry>
+</feed>
