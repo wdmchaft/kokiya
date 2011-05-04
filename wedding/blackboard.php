@@ -8,18 +8,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 <meta name="viewport" content="width=700">
 <title>黑板报</title>
-<link rel="stylesheet" type="text/css" media="screen,print" href="invitation/invitation.css" />
+<link rel="stylesheet" type="text/css" media="screen,print" href="invitation/invitation_files/invitation.css" />
 <!--[if lt IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='invitation_files/invitationIE.css'/><![endif]-->
 <!--[if gte IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='Media/IE8.css'/><![endif]-->
-
-<script type="text/javascript" src="jquery-1.5.2.min.js"></script>
-<script type="text/javascript" src="Scripts/invitation.js"></script>
-
-<script type="text/javascript" src="Scripts/iWebSite.js"></script>
-<script type="text/javascript" src="Scripts/Widgets/SharedResources/WidgetCommon.js"></script>
-<!--<script type="text/javascript" src="Scripts/Widgets/Navbar/navbar.js"></script>-->
-<script type="text/javascript" src="Scripts/iWebImage.js"></script>
-<script type="text/javascript" src="huan_ying_files/huan_ying.js"></script>
+<script type="text/javascript" src="invitation/Scripts/iWebSite.js"></script>
+<script type="text/javascript" src="invitation/Scripts/Widgets/SharedResources/WidgetCommon.js"></script>
+<script type="text/javascript" src="invitation/Scripts/Widgets/Navbar/navbar.js"></script>
+<script type="text/javascript" src="invitation/Scripts/Widgets/GoogleMap/GoogleMap.js"></script>
+<script type="text/javascript" src="invitation/Scripts/iWebImage.js"></script>
+<script type="text/javascript" src="invitation/invitation_files/invitation.js"></script>
 <style type="text/css">
 div#widget0 .navbar {
 	font-family: Arial, sans-serif;
@@ -74,17 +71,7 @@ div#widget0 li.current-page a {
                 <li class="noncurrent-page"><a href="./HOME.html">HOME </a></li>
                 <li class="noncurrent-page"><a href="./huan_ying.html">欢迎 </a></li>
                 <li class="noncurrent-page"><a href="./zhao_pian.html">照片 </a></li>
-                <li class="invip"><img alt="invitation" src="Media/invitation.png" /></li>
               </ul>
-              <!--<ul id="widget0-navbar-list" class="navbar-list">
-              <li></li>
-            </ul>-->
-              <div id="invitation">
-                <form class="inviform" action="invitation.php" method="post">
-                  <input id="inviname"  type="text" name="name" value="输入你的姓名"/>
-                  <input type="submit" value="log & checkIn" />
-                </form>
-              </div>
             </div>
           </div>
         </div>
@@ -92,14 +79,9 @@ div#widget0 li.current-page a {
       </div>
       <div style="height: 73px; margin-left: 0px; position: relative; width: 700px; z-index: 10; " id="header_layer">
         <div style="height: 0px; line-height: 0px; " class="bumper">&nbsp;</div>
-  <div style="height: 73px; margin-left: 0px; position: relative; width: 700px; z-index: 10; " id="header_layer">
-      <div style="height: 0px; line-height: 0px; " class="bumper"> </div>
-      <div style="height: 1px; width: 630px;  height: 1px; left: 35px; position: absolute; top: 3px; width: 630px; z-index: 1; " class="tinyText">
-        <div style="position: relative; width: 630px; "> <img src="HOME_files/shapeimage_1.jpg" alt="" style="height: 1px; left: 0px; position: absolute; top: 0px; width: 630px; " /> </div>
-      </div>
-      <div style="height: 50px; width: 630px;  height: 50px; left: 35px; position: absolute; top: 23px; width: 630px; z-index: 1; " class="tinyText style_SkipStrokeSkipFillSkipOpacity">
-      </div>
-    </div>
+        <div style="height: 1px; width: 630px;  height: 1px; left: 35px; position: absolute; top: 3px; width: 630px; z-index: 1; " class="tinyText">
+          <div style="position: relative; width: 630px; "> <img src="invitation_files/shapeimage_1.jpg" alt="" style="height: 1px; left: 0px; position: absolute; top: 0px; width: 630px; "> </div>
+        </div>
         <div id="id1" style="height: 50px; left: 35px; position: absolute; top: 23px; width: 630px; z-index: 1; " class="style_SkipStroke shape-with-text">
           <div class="text-content style_External_630_50" style="padding: 0px; ">
             <div class="style">
@@ -111,9 +93,9 @@ div#widget0 li.current-page a {
       <div style="margin-left: 0px; position: relative; width: 700px; z-index: 5; " id="body_layer"> </div>
       <div style="height: 150px; margin-left: 0px; position: relative; width: 700px; z-index: 15; " id="footer_layer">
         <form action="blackboard_files/result.php" method="post">
-          <input type="text" name="name" value="enter your name" />
-          <input type="text" name="comment" value="写点啥？" />
-          <input type="submit" value="贴上去" />
+        <input type="text" name="name" value="enter your name" />
+        <input type="text" name="comment" value="写点啥？" />
+        <input type="submit" value="贴上去" />
         </form>
       </div>
     </div>
