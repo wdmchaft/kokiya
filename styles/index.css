@@ -1,7 +1,76 @@
 * {
- 	padding: 15px;
- 	margin: 0;
- }
-a:link {
-	font: normal normal normal 1em Arial, sans-serif;
+	padding: 10px;
+	margin: 0;
+}
+body {
+	height:100%;
+	background: #1E1E1E;
+	/* Old browsers */
+	background: -moz-linear-gradient(left, #1E1E1E 0%, #6D6D6D 50%, #1C1C1C 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1E1E1E), color-stop(50%,#6D6D6D), color-stop(100%,#1C1C1C));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #1E1E1E 0%,#6D6D6D 50%,#1C1C1C 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #1E1E1E 0%,#6D6D6D 50%,#1C1C1C 100%);
+	/* Opera11.10+ */
+	background: -ms-linear-gradient(left, #1E1E1E 0%,#6D6D6D 50%,#1C1C1C 100%);
+	/* IE10+ */
+	filter: progid
+	:DXImageTransform.Microsoft.gradient( startColorstr='#1E1E1E', endColorstr='#1C1C1C',GradientType=1 );
+	/* IE6-9 */
+	background: linear-gradient(left, #1E1E1E 0%,#6D6D6D 50%,#1C1C1C 100%);
+	/* W3C */
+}
+header {
+	width:100%;
+	color:#FFFFFF;
+	text-shadow: 1px 1px 8px #ffffff;
+}
+header h1 {
+	width:100px;
+	font: 60px/68px 'AmerikaRegular', Arial, sans-serif;
+	letter-spacing: 0;
+	transform:rotate(-7deg);
+	-ms-transform:rotate(-7deg);
+	-moz-transform:rotate(-7deg);
+	-webkit-transform:rotate(-7deg);
+	-o-transform:rotate(-7deg);
+	transition:text-shadow 5s;
+	-moz-transition:text-shadow 5s;
+	/* Firefox 4 */
+	-webkit-transition:text-shadow 5s;
+	/* Safari and Chrome */
+	-o-transition:text-shadow 5s;
+	/* Opera */
+}
+h1:hover {
+	text-shadow:1px 1px 75px #ffffff;
+}
+header h2 {
+	width:300px;
+	position:relative;
+	left:120px;
+	font: 18px/27px 'AmerikaSansRegular', Arial, sans-serif;
+	letter-spacing: 0;
+}
+section {
+	width:80%;
+}
+a img {
+	padding:0px;
+	margin:0px;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	box-shadow: 5px 5px 5px #000000;
+	-moz-box-shadow: 5px 5px 5px #000000;
+	-webkit-box-shadow: 5px 5px 5px #000000;
+}
+p {
+	color: #FFFFFF;
+	background-color: #9A746F;
+	border:2px solid;
+	-moz-border-radius:25px;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
 }
