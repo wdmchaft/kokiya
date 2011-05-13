@@ -1,0 +1,108 @@
+body {
+	margin-left:auto;
+	margin-right:auto;
+	width:1000px;
+	height:700px;
+	display: box;
+	display: -webkit-box;
+	display: -moz-box;
+	box-orient: vertical;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	box-align:stretch;
+	-webkit-box-align:stretch;
+	-moz-box-align:stretch;
+}
+#up {
+	display:box;
+	display:-moz-box;
+	display:-webkit-box;
+	box-orient:horizontal;
+	-webkit-box-orient:horizontal;
+	-moz-box-orient:horizontal;
+	height:50px;
+	box-flex:1;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	transition: height 0.8s;
+	-webkit-transition: height 0.8s;
+	-moz-transition: height 0.8s;
+	-o-transition: height 0.8s;
+}
+#up:hover {
+	height:250px;
+}
+#down {
+	display:box;
+	display:-moz-box;
+	display:-webkit-box;
+	box-orient:horizontal;
+	-webkit-box-orient:horizontal;
+	-moz-box-orient:horizontal;
+	height:550px;
+	box-flex:1;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	transition: height 0.8s;
+	-webkit-transition: height 0.8s;
+	-moz-transition: height 0.8s;
+	-o-transition: height 0.8s;
+}
+#down:hover {
+	height:700px;
+}
+#logo {
+	width:160px;
+	box-flex:1;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	transition: width 0.8s;
+	-webkit-transition: width 0.8s;
+	-moz-transition: width 0.8s;
+	-o-transition: width 0.8s;
+}
+#logo:hover {
+	width:250px;
+}
+#impression {
+	width:700px;
+	box-flex:1;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	transition: width 0.8s;
+	-webkit-transition: width 0.8s;
+	-moz-transition: width 0.8s;
+	-o-transition: width 0.8s;
+}
+#impression:hover {
+	width:800px;
+}
+#preface {
+	width:200px;
+	box-flex:1;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	transition: width 0.8s;
+	-webkit-transition: width 0.8s;
+	-moz-transition: width 0.8s;
+	-o-transition: width 0.8s;
+}
+#preface:hover {
+	width:500px;
+}
+#catalog {
+	width:200px;
+	box-flex:1;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	transition: width 0.8s;
+	-webkit-transition: width 0.8s;
+	-moz-transition: width 0.8s;
+	-o-transition: width 0.8s;
+}
+#catalog:hover {
+	width:500px;
+}
+section{
+	overflow:hidden;
+}
