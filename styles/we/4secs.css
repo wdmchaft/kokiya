@@ -20,7 +20,7 @@ body {
 	box-orient:horizontal;
 	-webkit-box-orient:horizontal;
 	-moz-box-orient:horizontal;
-	height:50px;
+	height:100px;
 	box-flex:1;
 	-webkit-box-flex:1;
 	-moz-box-flex:1;
@@ -39,7 +39,7 @@ body {
 	box-orient:horizontal;
 	-webkit-box-orient:horizontal;
 	-moz-box-orient:horizontal;
-	height:550px;
+	height:600px;
 	box-flex:1;
 	-webkit-box-flex:1;
 	-moz-box-flex:1;
@@ -83,12 +83,12 @@ body {
 	-webkit-box-flex:1;
 	-moz-box-flex:1;
 	transition: width 0.8s;
-	-webkit-transition: width 0.8s;
+	-webkit-transition: width 0.8s ;
 	-moz-transition: width 0.8s;
 	-o-transition: width 0.8s;
 }
 #preface:hover {
-	width:500px;
+	width:700px;
 }
 #catalog {
 	width:200px;
