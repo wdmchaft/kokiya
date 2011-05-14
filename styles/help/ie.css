@@ -1,5 +1,5 @@
 * {
-	font-family:"MS Outlook",""
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 #nav {
 	width:15%;
@@ -44,7 +44,6 @@ a {
 }
 a:link {
 	color:#7F203B;
-	text-decoration:none;
 }
 a:visited {
 	color:#D94F00;
