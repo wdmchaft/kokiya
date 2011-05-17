@@ -38,9 +38,9 @@ div h1 {
 	filter: dropshadow(color=#666666, offx=2, offy=2);
 }
 div p {
-	line-height:normal;
+	line-height:150%;
 }
-.prev, .next,.catalog {
+.prev, .next, .catalog {
 	font-family:Tahoma, Geneva, sans-serif;
 	color:#FFFFFF;
 	background:#C6C6C6;
@@ -51,7 +51,7 @@ div p {
 	-moz-transition:all 0.2s;
 	-webkit-transition:all 0.2s;
 }
-.prev:hover,.next:hover,.catalog:hover{
+.prev:hover, .next:hover, .catalog:hover {
 	background:#E00;
 }
 .prev {
@@ -68,11 +68,11 @@ div p {
 	border-top-left-radius: 0px;
 	border-bottom-left-radius: 0px;
 }
-.catalog{
+.catalog {
 	position:relative;
 	left:-8%;
 	top:20px;
-	}
+}
 a:link {
 	text-decoration:none;
 }
