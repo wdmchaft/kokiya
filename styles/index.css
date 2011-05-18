@@ -16,9 +16,13 @@ body {
 	/* Opera11.10+ */
 	background: -ms-linear-gradient(left, #1E1E1E 0%, #6D6D6D 50%, #1C1C1C 100%);
 	/* IE10+ */
-	filter: progid 	:DXImageTransform.Microsoft.gradient( startColorstr='#1E1E1E', endColorstr='#1C1C1C', GradientType=1 );
+	filter: progid
+	:DXImageTransform.Microsoft.gradient( startColorstr='#1E1E1E', endColorstr='#1C1C1C', GradientType=1 );
 	/* IE6-9 */
-	background: linear-gradient(left, #1E1E1E 0%, #6D6D6D 50%, #1C1C1C 100%);/* W3C */
+	background: linear-gradient(left, #1E1E1E 0%, #6D6D6D 50%, #1C1C1C 100%);
+	/* W3C */
+	background:url(../media/background.png);
+	background-repeat: repeat-x;
 }
 header {
 	width:100%;
@@ -34,12 +38,13 @@ header h1 {
 	-moz-transform:rotate(-7deg);
 	-webkit-transform:rotate(-7deg);
 	-o-transform:rotate(-7deg);
-	transition:text-shadow 5s;
-	-moz-transition:text-shadow 5s;
+	transition:text-shadow 2s;
+	-moz-transition:text-shadow 2s;
 	/* Firefox 4 */
-	-webkit-transition:text-shadow 5s;
+	-webkit-transition:text-shadow 2s;
 	/* Safari and Chrome */
-	-o-transition:text-shadow 5s;/* Opera */
+	-o-transition:text-shadow 2s;
+	/* Opera */
 }
 h1:hover {
 	text-shadow:1px 1px 75px #ffffff;
@@ -60,6 +65,10 @@ a:link {
 a:visited {
 	text-decoration:none;
 }
+a * {
+	text-decoration:none;
+	border:none;
+}
 a img {
 	padding:0px;
 	margin:0px;
@@ -68,12 +77,4 @@ a img {
 	box-shadow: 5px 5px 5px #000000;
 	-moz-box-shadow: 5px 5px 5px #000000;
 	-webkit-box-shadow: 5px 5px 5px #000000;
-}
-p {
-	color: #FFFFFF;
-	background-color: #9A746F;
-	border:2px solid;
-	-moz-border-radius:25px;
-	border-radius: 50px;
-	-webkit-border-radius: 50px;
 }

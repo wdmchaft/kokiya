@@ -1,0 +1,7 @@
+header {
+	display: none;
+}
+body {
+	background:url(media/background.png);
+	background-repeat: repeat-x;
+}
