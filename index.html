@@ -1,52 +1,163 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<link rel="stylesheet" type="text/css" href="styles/index_ie.css" />
-		<![endif]-->
-		<meta charset="utf-8" />
-		<title>cookie呀 -- spencer &amp; emily 的呼唤</title>
-		<link rel="shortcut icon"  href="/logo.jpg" sizes="30x30" />
-		<link rel="stylesheet" type="text/css" href="styles/main.css" />
-		<script type="text/javascript">
-			var _gaq = _gaq || [];
-			_gaq.push([ '_setAccount', 'UA-22188974-1' ]);
-			_gaq.push([ '_trackPageview' ]);
-			(function() {
-				var ga = document.createElement('script');
-				ga.type = 'text/javascript';
-				ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
-	</head>
-	<body>
+﻿<!DOCTYPE HTML>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>cookie呀 -- spencer &amp; emily 的呼唤</title>
+<meta name="description" content="kokiya.com">
+<meta name="author" content="spencer">
+
+<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+<!-- CSS: implied media="all" -->
+<link rel="stylesheet" href="css/style.css?v=2">
+
+<!-- Uncomment if you are specifically targeting less enabled mobile browsers
+  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+
+<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+<script src="js/libs/modernizr-2.0.6.js" type="text/javascript"></script>
+<script src="js/libs/yepnope.1.0.2-min.js" type="text/javascript"></script>
+<!--switch to mini version after develop-->
+</head>
+
+<body>
+	<div id="container">
 		<header>
-			<h1>Kokiya</h1>
-			<h2>---- Spencer &amp; Emily的呼唤</h2>
+			<h1>KOKIYA<span>.com</span></h1>
+			<aside>
+				Like!
+				<!--google+1 button
+					sina share button
+				-->
+				<script type="text/javascript" charset="utf-8">
+					(function() {
+						var _w = 32, _h = 32;
+						var param = {
+							url : location.href,
+							type : '1',
+							count : '',
+							/**是否显示分享数，1显示(可选)*/
+							appkey : '2285514699',
+							/**您申请的应用appkey,显示分享来源(可选)*/
+							title : '',
+							/**分享的文字内容(可选，默认为所在页面的title)*/
+							pic : '',
+							/**分享图片的路径(可选)*/
+							ralateUid : '',
+							/**关联用户的UID，分享微博会@该用户(可选)*/
+							rnd : new Date().valueOf()
+						}
+						var temp = [];
+						for ( var p in param) {
+							temp.push(p + '='
+									+ encodeURIComponent(param[p] || ''))
+						}
+						document
+								.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?'
+										+ temp.join('&')
+										+ '" width="'
+										+ _w
+										+ '" height="' + _h + '"></iframe>')
+					})()
+				</script>
+				<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+					{lang: 'zh-CN'}
+				</script> 
+				<g:plusone count="false" callback="kokiya.com"></g:plusone>
+			</aside>
 		</header>
-		<!--[if lt IE 9]>
-		<img src="media/logo.png" alt="kokiya.com"/>
-		<br />
-		<![endif]-->
-		<section>
-			<a href="we/index.html">
-			<img src="media/mao.png" alt="4ever" />
-			</a>
-			<a href="wedding/HOME.html">
-			<img src="media/wedding.png" alt="wedding" />
-			</a>
-			<a href="innovation/home.html">
-			<img src="media/innovation.png" alt="灵感 &amp; 创意" />
-			</a>
-			<a href="help/home.html">
-			<img src="media/help.png" alt="帮助" />
-			</a>
-		</section>
+		<div id="main" role="main">
+			<section id="we">
+				<!--if supported add html5 progress feature done
+					use html5 localstorage or blabla to determin the value of progress bar
+				-->
+				<aside>
+					<img src="img/mao.png" alt="buddy - 我们那三年" />
+				</aside>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu purus vitae mauris facilisis vulputate eget sed odio. Maecenas tristique varius arcu vulputate molestie. Sed venenatis sapien leo, ut adipiscing libero. Pellentesque vestibulum, velit eu ornare pretium, nunc elit lobortis mauris, in scelerisque tellus odio id enim. Mauris auctor mattis augue commodo vulputate. Phasellus condimentum ante sed felis dictum vulputate. Etiam eget aliquam est. Nam tincidunt dolor quis leo hendrerit venenatis. Morbi eleifend velit ac ligula fermentum porta tristique odio hendrerit. In vitae nulla vel quam condimentum dictum. Etiam id nisl ante. Maecenas eget sapien at lorem ullamcorper aliquam. Ut ornare feugiat faucibus. Aliquam erat volutpat. Etiam in auctor tortor. Morbi felis elit, ornare in sagittis ut, cursus bibendum odio. Vestibulum ac nisl dui. Donec adipiscing purus sit amet elit consequat ultricies. Vestibulum commodo neque ac odio hendrerit a ultrices lectus vehicula</p> 
+				<section>
+					<nav>
+						<button>previous</button>
+						<button>next</button>
+					</nav>
+					<article>
+						<p>Loading</p>
+					</article>
+				</section>
+			</section>
+			<section id="wedding">
+				<a href="http://kokiya.com/wedding"><img src="img/wedding.png" alt="Spencer & Emily's Wedding Site" title="Spencer & Emily's Wedding Site"/></a>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu purus vitae mauris facilisis vulputate eget sed odio. Maecenas tristique varius arcu vulputate molestie. Sed venenatis sapien leo, ut adipiscing libero. Pellentesque vestibulum, velit eu ornare pretium, nunc elit lobortis mauris, in scelerisque tellus odio id enim. Mauris auctor mattis augue commodo vulputate. Phasellus condimentum ante sed felis dictum vulputate. Etiam eget aliquam est. Nam tincidunt dolor quis leo hendrerit venenatis. Morbi eleifend velit ac ligula fermentum porta tristique odio hendrerit. In vitae nulla vel quam condimentum dictum. Etiam id nisl ante. Maecenas eget sapien at lorem ullamcorper aliquam. Ut ornare feugiat faucibus. Aliquam erat volutpat. Etiam in auctor tortor. Morbi felis elit, ornare in sagittis ut, cursus bibendum odio. Vestibulum ac nisl dui. Donec adipiscing purus sit amet elit consequat ultricies. Vestibulum commodo neque ac odio hendrerit a ultrices lectus vehicula</p> 
+			</section>
+		</div>
 		<footer>
+			<!--<a href="http://html5boilerplate.com/" title="html5 - boilerplate">★</a>-->
+			<a href="http://www.w3.org/html/logo/"><img src="http://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered"></a>
+			<!--<a href="http://www.modernizr.com/"><img src="http://www.modernizr.com/i/img/logo-x12.png" width="75" height="36" alt="Modernizr" title="Modernizr html5检测库" /></a>
+			add href later
+			<a>作者</a>
+			<a>关于kokiya</a>-->
 		</footer>
-	</body>
+	</div>
+	<!--! end of #container -->
+
+
+	<!-- JavaScript at the bottom for fast page loading -->
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
+		type="text/javascript"></script>
+	<script type="text/javascript">
+		window.jQuery
+				|| document
+						.write("<script src='js/libs/jquery-1.6.2.min.js'>\x3C/script>")
+	</script>
+
+	<!-- scripts concatenated and minified via ant build script-->
+	<script src="js/plugins.js" type="text/javascript"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+	<!-- end scripts-->
+
+
+	<!--[if lt IE 7 ]>
+    <script src="js/libs/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+	<![endif]-->
+
+
+	<!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push([ '_setAccount', 'UA-22188974-1' ]);
+		_gaq.push([ '_trackPageview' ]);
+		(function() {
+			var ga = document.createElement('script');
+			ga.type = 'text/javascript';
+			ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+					: 'http://www')
+					+ '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</body>
 </html>
