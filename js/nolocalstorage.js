@@ -23,7 +23,7 @@ function setupQuickView(){
 
 function initProgressBar(){
 	var para=document.createElement('p');
-	$(para).insertAfter($('#we img'));
+	$(para).insertAfter($('#we>aside>h3'));
 	var readingprogress=document.createElement('progress');
 	$(readingprogress).insertAfter($('#we aside p'));
 	readingprogress.max=59;

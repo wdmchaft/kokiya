@@ -49,7 +49,7 @@ setupQuickView();
 */
 function initProgressBar(){
 	var para=document.createElement('p');
-	$(para).insertAfter($('#we img'));
+	$(para).insertAfter($('#we>aside>h3'));
 	var readingprogress=document.createElement('progress');
 	$(readingprogress).appendTo($('#we aside p'));
 	readingprogress.max=59;
@@ -68,8 +68,7 @@ if (Boolean(document.createElement('progress').value)){
 	yepnope({
 	load:['css/progresspolyfill.css','js/mylibs/progresspolyfill.min.js'],
 	complete:function(){initProgressBar();}
-	})
-}
+	})}
 /*两个按钮的代码：切换，改变progress*/
 function toPrevious() {
 	var chapter=getProgress();
@@ -114,6 +113,7 @@ function initNav() {
 
 initNav();
 
+/*为目录添加listener，使其可以跳转章节，并且按章节改变样式*/
 function toChapter(){
 	$('li').removeClass('liselected');
 	var chapter=parseInt(this.innerText);

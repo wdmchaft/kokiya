@@ -181,7 +181,10 @@ header h1 {
     letter-spacing: 0;
 }
 p{
-	font-size:medium;
+	line-height:1.5em;
+	text-indent:2em;
+	padding-bottom:0.8em;
+	font-size: 15px;
 }
 /*layout*/
 header{
@@ -192,7 +195,7 @@ header{
 }
 header>h1,h2{
 	padding:20px;
-} 
+}
 header aside{
 	position:absolute;
 	top:5px;
@@ -213,7 +216,7 @@ aside>img{
 #we{
 
 }
-#we> p {
+#we>div {
 	width:70%;
 	float:right;
 }
@@ -253,12 +256,11 @@ aside>img{
 	width: 180px;
 	height: 10px;
 	margin: 0 auto;
+	display: none;
 }
-
-#we > section >article>p{
-	line-height:1.5em;
-	text-indent:2em;
-	padding-bottom:0.8em;
+#we h3{
+	width: 170px;
+	margin: 0 auto;
 }
 button:last-child{
 	float:right;
@@ -273,8 +275,16 @@ progress{
 	position:relative;
 	clear:both;
 }
-#wedding>p{
+#we div,#wedding div{
+	padding: 3em 0;
+}
+#we div p,#wedding>div>p{
 	width:70%;
+	text-indent:0em;
+	line-height: 1.3em;
+}
+#we div p{
+	text-indent:2em;
 }
 #wedding >a{
 	float:right;
@@ -289,6 +299,33 @@ footer>a {
 	display:block;
 	width:60px;
 	margin:0 auto;
+}
+h6{
+	text-align: right;
+}
+#main span{
+	font-family:Times;
+	font-size:244px;
+	color: rgb(238,238,238);
+	display: block;
+	position: absolute;
+	z-index: -99;
+}
+#we span:first-of-type{
+	left: 28%;
+	top: 80px;
+}
+#we span:last-of-type{
+	left: 73%;
+	top: 550px;
+}
+#wedding span:first-of-type{
+	left: -9%;
+	top: -33px;
+}
+#wedding span:last-of-type{
+	left: 60%;
+	top: 250px;
 }
 
 /*color!!!*/
@@ -305,9 +342,7 @@ header span{
 header h1:hover{
 	color:rgb(100,140,180);
 }
-#main{
 
-}
 /* change it lagter 
 progress {
     border-radius: 2px;
