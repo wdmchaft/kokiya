@@ -16,17 +16,39 @@ Article.prototype = {
 	constructor : Article
 };
 
-$(document).ready(function() {
+$(document).ready(function() {toWe();
+});
+function toWe() {
 	$('aside>img').click(function() {
 		$('#wedding').hide('fast', function() {
 			$('#we>div').hide('fast', function() {
-				$('#we>section').show('slow');
-				$('#we>aside>nav').fadeIn();
-				$('#we>aside>p').fadeIn();
+				$('header span').text('/threeyears');
+				$('header h1').click(function() {
+					backFromWe();
+				});
+			});
+			$('#we>section').show('slow');
+			$('#we>aside>nav').fadeIn();
+			$('#we>aside>p').fadeIn();
+			$('#we .vbar').hide();
+		});
+	});
+}
+
+function backFromWe() {
+	$('#we>section').hide('slow', function() {
+		$('#we>aside>nav').fadeOut();
+		$('#we>aside>p').fadeOut('normal', function() {
+			$('#we>div').show('fast', function() {
+				$('#wedding').show('fast');
+				$('header span').text('.com');
+				$('header h1').unbind('click');
+				$('#we .vbar').show();
 			});
 		});
 	});
-});
+}
+
 /*
  https://github.com/Modernizr/Modernizr/issues/308
  Modernizr mini version ie7/8 bug
@@ -53,7 +75,7 @@ yepnope([{
 	}
 }, {
 	test : Modernizr.fontface,
-	yep : 'css/font/fontface.css'
+	yep : 'css/font/Disco_fontface.css'
 }, {
 	test : 1,
 	load : ['http://tjs.sjs.sinajs.cn/t3/platform/js/api/wb.js', 'http://tjs.sjs.sinajs.cn/t3/style/css/common/card.css'],
