@@ -167,60 +167,77 @@ a:hover { color: #036; }
  *
  * Author: spencer
  */
- /*typography*/
-section>article>h1{
-	color:rgb(175,175,175);
-	text-align:center;
-	font-size:3em;
+body{
+	background-color:#c1c1c1;
+}
+h1,h2,h3,h4,h5,h6,p{
+	font-family: \5FAE\8F6F\96C5\9ED1,\5B8B\4F53,\9ED1\4F53,\534E\6587\5B8B\4F53,\534E\6587\9ED1\4F53;
+}
+h6{
+	text-align: right;
+}
+img{
+	float: none;
+	margin: 20px auto;
+	display: block;
+}
+p{
+	line-height:1.5em;
+	text-indent:2em;
+	padding-bottom:0.8em;
+	font-size: 15px;
+    text-shadow: 1px 1px 0px #FFF;
+}
+header{
+	height : 100px;
+	padding-bottom:25px;
+	background:url(../img/headerp.png);
+	background-repeat:repeat;
+	color: #FFFFFF;
 }
 header h1 {
     position: relative;
     left: 1em;
-    width:100px;
-    font: 60px/68px 'AmerikaRegular', Arial, sans-serif;
+    top: 18px;
+    font: 88px/88px 'DISCORegular', Arial, sans-serif;
     letter-spacing: 0;
+    cursor: pointer;
+    height: 94px;
+    text-shadow: 2px 2px 2px #00585f;
 }
-p{
-	font-size:medium;
+header h1:hover{
+	color:#FF3800;
 }
-/*layout*/
-header{
-	height : 100px;
-	padding-bottom:25px;
-	margin-bottom:25px;
-	border-bottom:1px solid rgb(175,175,175);
-}
-header>h1,h2{
-	padding:20px;
-} 
 header aside{
 	position:absolute;
 	top:5px;
 	left:85%;
 }
-#main {
-	margin: 0 auto;
-	width: 80%;
+header span{
+	color: #000000;
+	font-size:55px;    
+	text-shadow: 0px 1px 1px #ffffff;
 }
-#we > aside {
-	width:205px;
-	float:left;
-
-}
-aside>img{
-	cursor:pointer;
+#main{
+	background-image: url(../img/shadow.png);
+	background-position: top center;
 }
 #we{
-
+	padding-left:10%;
+	background-image: url(../img/wep.png);
+	background-repeat: repeat;
 }
-#we> p {
-	width:70%;
-	float:right;
+#we>aside {
+	width:30%;
+	float:left;
 }
-#we > section {
-	display : none;
-	width:70%;
-	float:right;
+#we aside p{
+	width: 180px;
+	height: 10px;
+	text-indent: 0px;
+	margin: 0 auto;
+	display: inline;
+	display: none;
 }
 #we>aside>nav{
 	display: none;
@@ -233,33 +250,57 @@ aside>img{
 	font-size: smaller;
 	cursor:pointer;
 	margin: 10px;
-	transition:all linear 0.2s;
 	-webkit-transition:all linear 0.2s;
 	-moz-transition:all linear 0.2s;
 	-o-transition:all linear 0.2s;
+	transition:all linear 0.2s;
 }
 #we>aside>nav li:hover{
 	background-color: rgb(100,140,180);
 	color: rgb(200,200,200);
 }
-.liselected{
-	background-color: rgb(100,140,180);
-	color: rgb(200,200,200);
+#we h3{
+	text-align:center;
+	font-size:17px;
+	font-weight:normal;
+	color:#00585f;
+	width: 170px;
+	margin: 10px auto;
+	padding:10px;
+	text-shadow: 1px 1px 0px #808080;
 }
-#we h1{
-	padding: 2em;
+aside>img{
+	cursor:pointer;
 }
-#we aside p{
-	width: 180px;
-	height: 10px;
-	margin: 0 auto;
+#we>div {
+	width:60%;
+	float: right;
+	margin-right: 10%;
+}
+#we>div h1{
+	text-align: center;
+	font: 40px/50px 'DISCORegular',serif;
+	text-shadow: 1px 1px 0px white;
+	color: #00585f;
+	padding: 15px;
+}
+#we>section {
+	display:none;
+	width:60%;
+	margin-right:10%;
+	float:right;
+}
+#we>section>nav{
+	position: relative;
+	top: 77px;
+}
+section>article>h1{
+	color:rgb(175,175,175);
+	text-align:center;
+	font-size:3em;
+	padding: 1em;
 }
 
-#we > section >article>p{
-	line-height:1.5em;
-	text-indent:2em;
-	padding-bottom:0.8em;
-}
 button:last-child{
 	float:right;
 }
@@ -267,51 +308,125 @@ progress{
 	width: 175px;
 	vertical-align: 0em;
 }
+#we div,#wedding div{
+	padding: 3em 0;
+}
+#we>div>p,#wedding>div>p{
+	width:70%;
+	text-indent:0em;
+	line-height: 1.3em;
+}
+#we>div>h6,#wedding>div>h6{
+	font-family: serif, Arial, sans-serif;
+	padding-right:1em;
+	font-weight:normal;
+}
+#we>div>p{
+	text-indent:2em;
+	margin:0 auto;
+}
 #wedding {
-	margin-top:25px;
-	padding-top:25px;
+	border-top:1px solid rgb(200,190,160);
+	padding-left:10%;
 	position:relative;
 	clear:both;
+	background:url(../img/weddingp.png) repeat;
 }
-#wedding>p{
-	width:70%;
+#wedding h1{
+	text-align: center;
+	font: 40px/50px 'DISCORegular',serif;
+	text-shadow: 1px 1px 0px white;
+	color: #FF3800;
+	padding: 15px;
 }
-#wedding >a{
+#wedding>aside{
+	width:30%;
 	float:right;
 }
+#wedding>div{
+	width: 70%;
+}
+#wedding>div>p{
+	margin: 0 auto	;
+}
+#wedding .vbar{
+	top:12%;
+	right: 25%;
+	height:380px;
+}
 footer {
-	margin-top:25px;
 	padding-top:25px;
 	border-top:1px solid rgb(175,175,175);
 	clear:both;
+	background: url(../img/footerp.png) repeat;
 }
 footer>a {
 	display:block;
 	width:60px;
 	margin:0 auto;
 }
-
-/*color!!!*/
-#main{
-	background-image: url(img/bgpattern.png);
-	background-repeat: repeat;
+.liselected{
+	background-color: #00585f;
+	color: #fffcc4;
 }
-header{
-	background-color:gray;
-	color: rgb(200,200,200);
-	text-shadow: 1px 1px 1px #a1a1a1;
-	filter: dropshadow(color=#a1a1a1, offx=1, offy=1);
-	border-top:5px solid rgb(100,140,180); 
+.clear{
+	clear: both;
 }
-header span{
-	color: rgb(75,75,75);
+.shadow{
+	margin:0 10% 0 10%;
+	position: absolute;
 }
-header h1:hover{
-	color:rgb(100,140,180);
+.vbar{
+	top:210px;
+	margin:auto 0;
+	position: absolute;
+	width: 0px;
+	height: 400px;
+	right: 60%;
+	border: 0;
+	border-left: 1px solid rgba(0, 0, 0, 0.1);
+	border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
-#main{
-
+.hbar{
+	margin:0 auto;
+	position: relative;
+	height: 0px;
+	width: 160px;
+	border: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+button {
+   border-top: 1px solid #f0edbb;
+   background: #009393;
+   background: -webkit-gradient(linear, left top, left bottom, from(#00595f), to(#009393));
+   background: -webkit-linear-gradient(top, #00595f, #009393);
+   background: -moz-linear-gradient(top, #00595f, #009393);
+   background: -ms-linear-gradient(top, #00595f, #009393);
+   background: -o-linear-gradient(top, #00595f, #009393);
+   padding: 6.5px 13px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #fffcc4;
+   font-size: 12px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+button:hover {
+   border-top-color: #009393;
+   background: #009393;
+   color: #fffcc4;
+   }
+button:active {
+   border-top-color: #00595f;
+   background: #00595f;
+   }
 /* change it lagter 
 progress {
     border-radius: 2px;

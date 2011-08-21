@@ -186,7 +186,7 @@
         <exclude name="**/${dir.js.libs}/"/>
         <exclude name="**/${dir.publish}/"/>
           </fileset>
-            <arg value="-jar" />
+            <arg value="-jar"/><arg line="--charset utf-8" /> 
             <arg path="./${dir.build.tools}/${tool.rhino}" />
             <arg path="./${dir.build.tools}/${tool.jslint}" />
             <srcfile/>
@@ -205,7 +205,7 @@
         <exclude name="**/${dir.js.libs}/"/>
         <exclude name="**/${dir.publish}/"/>
           </fileset>
-            <arg value="-jar" />
+            <arg value="-jar"/><arg line="--charset utf-8" /> 
             <arg path="./${dir.build.tools}/${tool.rhino}" />
             <arg path="./${dir.build.tools}/${tool.jshint}" />
             <srcfile/>
@@ -222,7 +222,7 @@
                 <exclude name="**/*.min.css"/>
                 <exclude name="**/${dir.publish}/"/>
             </fileset>
-            <arg value="-jar" />
+            <arg value="-jar"/><arg line="--charset utf-8" /> 
             <arg path="./${dir.build.tools}/${tool.rhino}" />
             <arg path="./${dir.build.tools}/${tool.csslint}" />
             <srcfile/>
@@ -700,7 +700,7 @@
         <echo message=" - compressing inline style/script tag contents"/>
         <apply executable="java" parallel="false" dest="./${dir.publish}/" >
             <fileset dir="./${dir.intermediate}/" includes="${page-files}"/>
-            <arg value="-jar"/>
+            <arg value="-jar"/> 
             <arg path="./${dir.build.tools}/${tool.htmlcompressor}"/>
             <arg line="--preserve-multi-spaces"/>
             <arg line="--remove-quotes"/>
@@ -723,7 +723,7 @@
         <echo message=" - compressing inline style/script tag contents"/>
         <apply executable="java" parallel="false" dest="./${dir.publish}/" >
             <fileset dir="./${dir.intermediate}/" includes="${page-files}"/>
-            <arg value="-jar"/>
+            <arg value="-jar"/> 
             <arg path="./${dir.build.tools}/${tool.htmlcompressor}"/>
             <arg value="--preserve-comments"/>
             <arg line="--preserve-multi-spaces"/>
