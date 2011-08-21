@@ -292,6 +292,10 @@ footer>a {
 }
 
 /*color!!!*/
+#main{
+	background-image: url(img/bgpattern.png);
+	background-repeat: repeat;
+}
 header{
 	background-color:gray;
 	color: rgb(200,200,200);
