@@ -16,7 +16,7 @@ function setProgress(chapter) {
 
 function getProgress() {
     var progressvalue = localStorage.getItem('progress');
-    if (progressvalue) {
+    if (Boolean(parseInt(progressvalue))) {
         return parseInt(progressvalue,10);
     } else {
         return 0;
@@ -132,7 +132,7 @@ initNav();
 
 function toChapter() {
     $('li').removeClass('liselected');
-    var chapter = parseInt(this.innerText);
+    var chapter = parseInt(this.innerHTML);
     setProgress(chapter.toString());
     thisarticle.refresh();
     setupQuickView();

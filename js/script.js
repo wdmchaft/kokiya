@@ -19,7 +19,7 @@ Article.prototype = {
 function backFromWe() {
     $('#we>section').hide('slow', function() {
         $('#we>aside>nav').fadeOut();
-        $('#we>aside>p').fadeOut('normal', function() {
+        $('#we>aside>p').show('normal', function() {
             $('#we>div').show('fast', function() {
                 $('#wedding').show('fast');
                 $('header span').text('.com');

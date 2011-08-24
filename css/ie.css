@@ -1,0 +1,29 @@
+﻿body{
+	background:#fffcc4;
+}
+#we{
+	padding-left:0px;
+}
+#we div{
+	float:none;
+	position:relative;
+	top:10px;
+}
+#container>img{
+	display:none;
+}
+.sorry{
+	position:absolute;
+	color:rgb(100,100,100);
+	background-color:rgb(200,200,150);
+	top:0px;
+	left:45%;
+	border:2px solid grey;
+}
+.sorry p{
+	text-align:center;
+	font:12px 'DISCORegular' serif;
+	text-indent:0px;
+	line-height:1em;
+	padding-bottom:0px;
+}
