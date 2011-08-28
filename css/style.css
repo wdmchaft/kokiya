@@ -176,7 +176,7 @@ h1,h2,h3,h4,h5,h6,p{
 h6{
 	text-align: right;
 }
-img{
+#we aside img,#wedding img{
 	float: none;
 	margin: 20px auto;
 	display: block;
@@ -236,7 +236,6 @@ header span{
 	height: 10px;
 	text-indent: 0px;
 	margin: 0 auto;
-	display: inline;
 	display: none;
 }
 #we>aside>nav{
@@ -259,7 +258,7 @@ header span{
 	background-color: rgb(100,140,180);
 	color: rgb(200,200,200);
 }
-#we h3{
+#we aside h3{
 	text-align:center;
 	font-size:17px;
 	font-weight:normal;
@@ -308,7 +307,7 @@ progress{
 	width: 175px;
 	vertical-align: 0em;
 }
-#we div,#wedding div{
+#we>div,#wedding div{
 	padding: 3em 0;
 }
 #we>div>p,#wedding>div>p{
@@ -444,7 +443,15 @@ progress::-webkit-progress-value {
     background-color: #aadd6a;
 }
 */
-
+/**
+*ownstyle for DISQUS
+*/
+#disqus_thread{
+    border-top: 1px dotted gray;
+    margin-bottom: 10px;
+    margin-top: 2em;
+    padding: 1em;
+}
 /**
  * Non-semantic helper classes: please define your styles before this section.
  */
