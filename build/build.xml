@@ -89,7 +89,6 @@
             <antcall target="-text.production"/>
         </else>
     </if>
-    <antcall target="-imgcopy"/>
     </target>
 
 
@@ -186,7 +185,7 @@
         <exclude name="**/${dir.js.libs}/"/>
         <exclude name="**/${dir.publish}/"/>
           </fileset>
-            <arg value="-jar"/><arg line="--charset utf-8" /> 
+            <arg value="-jar" />
             <arg path="./${dir.build.tools}/${tool.rhino}" />
             <arg path="./${dir.build.tools}/${tool.jslint}" />
             <srcfile/>
@@ -205,7 +204,7 @@
         <exclude name="**/${dir.js.libs}/"/>
         <exclude name="**/${dir.publish}/"/>
           </fileset>
-            <arg value="-jar"/><arg line="--charset utf-8" /> 
+            <arg value="-jar" />
             <arg path="./${dir.build.tools}/${tool.rhino}" />
             <arg path="./${dir.build.tools}/${tool.jshint}" />
             <srcfile/>
@@ -222,7 +221,7 @@
                 <exclude name="**/*.min.css"/>
                 <exclude name="**/${dir.publish}/"/>
             </fileset>
-            <arg value="-jar"/><arg line="--charset utf-8" /> 
+            <arg value="-jar" />
             <arg path="./${dir.build.tools}/${tool.rhino}" />
             <arg path="./${dir.build.tools}/${tool.csslint}" />
             <srcfile/>
@@ -239,11 +238,11 @@
 
     <!-- Target: basics -->
     <target name="-basics.dev"
-            depends="-rev,
-                     -copy"/>
+            depends="-intro,
+                     -copyall"/>
 
     <target name="-basics.test"
-            depends="-rev,
+            depends="-intro,
                      -usemin,
                      -js.all.minify,
                      -js.main.concat,
@@ -254,7 +253,7 @@
                      -copy"/>
 
     <target name="-basics.production"
-            depends="-rev,
+            depends="-intro,
                      -usemin,
                      -js.all.minify,
                      -js.main.concat,
@@ -266,11 +265,11 @@
 
     <!-- Target: text -->
     <target name="-text.dev"
-            depends="-rev,
-                     -copy"/>
+            depends="-intro,
+                     -copyall"/>
 
     <target name="-text.test"
-            depends="-rev,
+            depends="-intro,
                      -usemin,
                      -js.all.minify,
                      -js.main.concat,
@@ -282,7 +281,7 @@
                      -copy"/>
 
     <target name="-text.production"
-            depends="-rev,
+            depends="-intro,
                      -usemin,
                      -js.all.minify,
                      -js.main.concat,
@@ -295,13 +294,13 @@
 
     <!-- Target: buildkit -->
     <target name="-buildkit.dev"
-            depends="-rev,
+            depends="-intro,
                      -imagespng,
                      -imagesjpg,
-                     -copy"/>
+                     -copyall"/>
 
     <target name="-buildkit.test"
-            depends="-rev,
+            depends="-intro,
                      -usemin,
                      -js.all.minify,
                      -js.main.concat,
@@ -315,7 +314,7 @@
                      -copy"/>
 
     <target name="-buildkit.production"
-            depends="-rev,
+            depends="-intro,
                      -usemin,
                      -js.all.minify,
                      -js.main.concat,
@@ -330,13 +329,13 @@
 
     <!-- Target: build -->
     <target name="-build.dev"
-            depends="-rev,
+            depends="-intro,
                      -imagespng,
                      -imagesjpg,
-                     -copy"/>
+                     -copyall"/>
 
     <target name="-build.test"
-            depends="-rev,
+            depends="-intro,
                      -usemin,
                      -js.all.minify,
                      -js.main.concat,
@@ -350,7 +349,7 @@
                      -copy"/>
 
     <target name="-build.production"
-            depends="-rev,
+            depends="-intro,
                      -usemin,
                      -js.all.minify,
                      -js.main.concat,
@@ -365,13 +364,13 @@
 
     <!-- Target: minify -->
     <target name="-minify.dev"
-            depends="-rev,
+            depends="-intro,
                      -imagespng,
                      -imagesjpg,
-                     -copy"/>
+                     -copyall"/>
 
     <target name="-minify.test"
-            depends="-rev,
+            depends="-intro,
                      -usemin,
                      -js.all.minify,
                      -js.main.concat,
@@ -385,7 +384,7 @@
                      -copy"/>
 
     <target name="-minify.production"
-            depends="-rev,
+            depends="-intro,
                      -usemin,
                      -js.all.minify,
                      -js.main.concat,
@@ -412,7 +411,7 @@
     </target>
 
 
-    <target name="-rev" description="(PRIVATE) Increase the current build number by one and set build date">
+    <target name="-intro" description="(PRIVATE) Kindly inform the developer about the impending magic">
     <!-- This is a private target -->
 
         <echo message="====================================================================="/>
@@ -430,7 +429,7 @@
 
     </target>
 
-    <target name="-mkdirs">
+    <target name="-mkdirs" depends="-clean">
       <if>
           <or>
             <equals arg1="${dir.publish}" arg2="."/>
@@ -476,6 +475,20 @@
             </fileset>
         </copy>
 
+        <echo message="A copy of all new non-dev files are now in: ./${dir.publish}."/>
+    </target>
+
+    <target name="-copyall" depends="-mkdirs">
+    <!-- This is a private target -->
+	<!-- Copies all files, including .css and .js files for when you aren't minifying-->
+        <echo message="Copying over all files..."/>
+
+        <copy todir="./${dir.publish}">
+            <fileset dir="${dir.source}/" excludes="${file.default.exclude}, ${file.exclude}">
+                <exclude name="${file.manifest}"/>
+            </fileset>
+        </copy>
+
         <echo message="A copy of all non-dev files are now in: ./${dir.publish}."/>
     </target>
 
@@ -486,7 +499,7 @@
         <concat destfile="./${dir.intermediate}/${dir.js}/scripts-concat.js" overwrite="no">
             <fileset dir="./${dir.intermediate}/">
                 <include name="${dir.js.main}/plugins.js"/>
-                <include name="${dir.js.main}/script.js"/>
+                <include name="${dir.js.main}/${file.root.script}"/>
             </fileset>
         </concat>
     </target>
@@ -515,8 +528,8 @@
             </fileset>
         </concat>
 
-        <checksum file="${dir.intermediate}/${dir.js}/scripts-concat.min.js" algorithm="sha" property="scripts.sha" />
-
+        <checksum file="${dir.intermediate}/${dir.js}/scripts-concat.min.js" algorithm="sha" property="scripts.fullsha" />
+        <propertyregex property="scripts.sha" input="${scripts.fullsha}" regexp=".{${hash.length}}" select="\0" />
         <property name="scripts.js" value="${dir.js}/${scripts.sha}.js" />
         <copy file="${dir.intermediate}/${dir.js}/scripts-concat.min.js" tofile="${dir.publish}/${dir.js}/${scripts.sha}.js" />
     </target>
@@ -528,16 +541,17 @@
             <fileset dir="${dir.source}/" includes="${dir.js}/**/*.min.js"  />
         </copy>
         <apply executable="java" parallel="false">
-            <fileset dir="${dir.source}/" >
-                <include name="${dir.js}/**/*.js"/>
-                <exclude name="${dir.js}/**/*.min.js"/>
+            <fileset dir="${dir.source}/" excludes="${dir.js.mylibs}/${file.js.bypass}, ${dir.js}/**/*.min.js" includes="${dir.js}/**/*.js">
             </fileset>
             <arg line="-jar"/>
-            <arg path="./${dir.build.tools}/${tool.yuicompressor}"/>
-            <srcfile/>
-            <arg line="--line-break"/>
-            <arg line="4000"/>
-            <arg line="-o"/>
+            <arg path="./${dir.build.tools}/closure-compiler-v1346.jar"/>
+            <arg line="--js"/>
+			<srcfile/>
+			<arg line="--compilation_level" />
+			 <arg value="${scripts.compilation.level}" />
+			 <arg line="--warning_level" />
+			 <arg value="${scripts.compilation.warninglevel}" />
+			 <arg line="--js_output_file" />
             <mapper type="glob" from="*.js" to="${basedir}/${dir.intermediate}/*.js"/>
             <targetfile/>
         </apply>
@@ -552,7 +566,7 @@
               <exclude name="${dir.js}/mylibs-concat.js"/>
               <exclude name="${dir.js}/scripts-concat.min.js"/>
               <exclude name="${dir.js}/plugins.js"/>
-              <exclude name="${dir.js}/script.js"/>
+              <exclude name="${dir.js}/${file.root.script}"/>
           </fileset>
         </copy>
         <copy todir="${dir.publish}/${dir.js.mylibs}/">
@@ -609,14 +623,15 @@
 
         <echo message="Update the HTML to reference our concatenated script file: ${scripts.js}"/>
         <!-- style.css replacement handled as a replacetoken above -->
-        <replaceregexp match="&lt;!-- scripts concatenated [\d\w\s\W]*?!-- end ((scripts)|(concatenated and minified scripts))\s?--&gt;" replace="&lt;script defer src='${scripts.js}\'&gt;&lt;/script&gt;" flags="m">
+        <replaceregexp match="&lt;!-- scripts concatenated [\d\w\s\W]*&lt;script.*src=['&quot;]?(.*)/${file.root.script}(?:\?.*)?['&quot;]?\s*&gt;\s*&lt;/script&gt;[\d\w\s\W]*&lt;!-- end ((scripts)|(concatenated and minified scripts))\s*--&gt;"
+        	replace="&lt;script defer src='\1/${scripts.sha}.js\'&gt;&lt;/script&gt;" flags="m">
             <fileset dir="${dir.intermediate}" includes="${page-files}"/>
         </replaceregexp>
         <!--[! use comments like this one to avoid having them get minified -->
 
         <echo message="Updating the HTML with the new css filename: ${style.css}"/>
 
-        <replaceregexp match="&lt;link rel=['&quot;]?stylesheet['&quot;]?\s+href=['&quot;]?(.*)/style.css(?:\?.*)?['&quot;]?\s*&gt;" 
+        <replaceregexp match="&lt;link rel=['&quot;]?stylesheet['&quot;]?\s+href=['&quot;]?(.*)/${file.root.stylesheet}(?:\?.*)?['&quot;]?\s*&gt;"
         	replace="&lt;link rel='stylesheet' href='\1/${css.sha}.css'&gt;" flags="m">
             <fileset dir="${dir.intermediate}" includes="${page-files}"/>
         </replaceregexp>
@@ -678,11 +693,23 @@
                 </for>
                 <replace token="# js files" value="# js files${line.separator}${scripts.js}" file="${dir.intermediate}/${file.manifest}" />
 
+                <!-- add image files -->
+                <echo message="Updating the site.manifest with the images"/>
+                <for param="file">
+                    <path>
+                        <fileset dir="./${dir.source}/${dir.images}/" includes="**/*"/>
+                    </path>
+                    <sequential>
+                        <basename property="filename.@{file}" file="@{file}" />
+                        <replaceregexp match="# image files" replace="# image files${line.separator}${dir.images}/${filename.@{file}}" file="${dir.intermediate}/${file.manifest}" />
+                    </sequential>
+                </for>
+
                 <echo message="copying ${file.manifest} to /${dir.publish}"/>
                 <copy file="${dir.intermediate}/${file.manifest}" tofile="${dir.publish}/${file.manifest}" />
 
                 <echo>Add manifest attribute to HTML: </echo>
-                <replaceregexp match="&lt;html (.*?)>\s*?&lt;!--&lt;!\[endif" replace='&lt;html \1 manifest="${file.manifest}"> &lt;!--&lt;![endif' flags="g">
+                <replaceregexp match="&lt;html (.*?)>" replace='&lt;html \1 manifest="${file.manifest}">' flags="g">
                     <fileset dir="./${dir.intermediate}" includes="${page-files}"/>
                 </replaceregexp>
 
@@ -698,10 +725,10 @@
         <echo message=" - maintaining whitespace"/>
         <echo message=" - removing html comments"/>
         <echo message=" - compressing inline style/script tag contents"/>
-        <apply executable="java" parallel="false" dest="./${dir.publish}/" >
-            <fileset dir="./${dir.intermediate}/" includes="${page-files}"/>
-            <arg value="-jar"/> 
-            <arg path="./${dir.build.tools}/${tool.htmlcompressor}"/>
+        <apply executable="java" parallel="false">
+            <fileset dir="${dir.intermediate}/" includes="${page-files}"/>
+            <arg value="-jar"/>
+            <arg path="${dir.build.tools}/${tool.htmlcompressor}"/>
             <arg line="--preserve-multi-spaces"/>
             <arg line="--remove-quotes"/>
             <arg line="--compress-js"/>
@@ -710,7 +737,7 @@
             <arg line="--preserve-ssi"/>
             <srcfile/>
             <arg value="-o"/>
-            <mapper type="glob" from="*" to="../${dir.publish}/*"/>
+            <mapper type="glob" from="*" to="${basedir}/${dir.publish}/*"/>
             <targetfile/>
         </apply>
     </target>
@@ -721,10 +748,10 @@
         <echo message=" - maintaining whitespace"/>
         <echo message=" - retain html comments"/>
         <echo message=" - compressing inline style/script tag contents"/>
-        <apply executable="java" parallel="false" dest="./${dir.publish}/" >
-            <fileset dir="./${dir.intermediate}/" includes="${page-files}"/>
-            <arg value="-jar"/> 
-            <arg path="./${dir.build.tools}/${tool.htmlcompressor}"/>
+        <apply executable="java" parallel="false">
+            <fileset dir="${dir.intermediate}/" includes="${page-files}"/>
+            <arg value="-jar"/>
+            <arg path="${dir.build.tools}/${tool.htmlcompressor}"/>
             <arg value="--preserve-comments"/>
             <arg line="--preserve-multi-spaces"/>
             <arg line="--compress-js"/>
@@ -733,7 +760,7 @@
             <arg line="--preserve-ssi"/>
             <srcfile/>
             <arg value="-o"/>
-            <mapper type="glob" from="*" to="../${dir.publish}/*"/>
+            <mapper type="glob" from="*" to="${basedir}/${dir.publish}/*"/>
             <targetfile/>
         </apply>
     </target>
@@ -744,10 +771,10 @@
         <echo message=" - removing unnecessary whitespace"/>
         <echo message=" - removing html comments"/>
         <echo message=" - compressing inline style/script tag contents"/>
-        <apply executable="java" parallel="false" dest="./${dir.publish}/" >
-            <fileset dir="./${dir.intermediate}/" includes="${page-files}"/>
+        <apply executable="java" parallel="false">
+            <fileset dir="${dir.intermediate}/" includes="${page-files}"/>
             <arg value="-jar"/>
-            <arg path="./${dir.build.tools}/${tool.htmlcompressor}"/>
+            <arg path="${dir.build.tools}/${tool.htmlcompressor}"/>
             <arg line="--remove-quotes"/>
             <arg line="--compress-js"/>
             <arg line="--compress-css"/>
@@ -755,7 +782,7 @@
             <arg line="--preserve-ssi"/>
             <srcfile/>
             <arg value="-o"/>
-            <mapper type="glob" from="*" to="../${dir.publish}/*"/>
+            <mapper type="glob" from="*" to="${basedir}/${dir.publish}/*"/>
             <targetfile/>
         </apply>
     </target>
@@ -843,7 +870,7 @@
 
         <!-- replace imports with h5bp-import tags (part 1) this one wraps @media types -->
         <replaceregexp file="${dir.intermediate}/${dir.css}/${file.root.stylesheet}"
-                        match="^@import\s+(?:url\s*\(\s*['&quot;]?|['&quot;])((?!http:|https:|ftp:|\/\/)[^&quot;^'^\s]+)(?:['&quot;]?\s*\)|['&quot;])\s*([\w\s,\-]*);.*$"
+                        match="^@import\s+(?:url\s*\(\s*['&quot;]?|['&quot;])((?!http:|https:|ftp:|\/\/)[^&quot;^'^\s]+)(?:['&quot;]?\s*\)|['&quot;])\s*([\w\s\(\)\d\:,\-]*);.*$"
                        replace="@media \2{ /* h5bp-import: \1 */ }" byline="true" />
 
         <!-- replace imports with h5bp-import tags (part 2) -->
@@ -893,7 +920,8 @@
             <targetfile/>
         </apply>
 
-        <checksum file="${dir.intermediate}/${dir.css}/style-concat.min.css" algorithm="sha" property="css.sha" />
+        <checksum file="${dir.intermediate}/${dir.css}/style-concat.min.css" algorithm="sha" property="css.fullsha" />
+        <propertyregex property="css.sha" input="${css.fullsha}" regexp=".{${hash.length}}" select="\0" />
         <property name="style.css" value="${dir.css}/${css.sha}.css" />
         <copy file="${dir.intermediate}/${dir.css}/style-concat.min.css" tofile="${dir.publish}/${dir.css}/${css.sha}.css" />
 
@@ -953,23 +981,27 @@
                     <echo message="*** For instructions see 'Dependencies' at: http://html5boilerplate.com/docs/#Build-script#dependencies" />
                 </then>
             </elseif>
+            <elseif>
+                <os family="windows" />
+                <!-- work around https://sourceforge.net/tracker/?func=detail&aid=2671422&group_id=151404&atid=780916 -->
+                <then>
+                    <delete>
+                        <fileset dir="./${dir.publish}/${dir.images}/">
+                            <include name="**/*.png"/>
+                        </fileset>
+                    </delete>
+                    <apply executable="${basedir}/${dir.build.tools}/optipng-0.6.4-exe/optipng.exe" dest="./${dir.publish}/${dir.images}/" osfamily="windows">
+                        <fileset dir="./${dir.source}/${dir.images}/" includes="**/*.png"  excludes="${images.bypass}, ${images.default.bypass}"/>
+                        <arg value="-quiet"/>
+                        <arg value="-o7"/>
+                        <arg value="-out"/>
+                        <targetfile/>
+                        <srcfile/>
+                        <mapper type="identity"/>
+                    </apply>
+                </then>
+            </elseif>
         </if>
-
-        <!-- work around https://sourceforge.net/tracker/?func=detail&aid=2671422&group_id=151404&atid=780916 -->
-        <delete>
-            <fileset dir="./${dir.publish}/${dir.images}/">
-                <include name="**/*.png"/>
-            </fileset>
-        </delete>
-        <apply executable="${basedir}/${dir.build.tools}/optipng-0.6.4-exe/optipng.exe" dest="./${dir.publish}/${dir.images}/" osfamily="windows">
-            <fileset dir="./${dir.source}/${dir.images}/" includes="**/*.png"  excludes="${images.bypass}, ${images.default.bypass}"/>
-            <arg value="-quiet"/>
-            <arg value="-o7"/>
-            <arg value="-out"/>
-            <targetfile/>
-            <srcfile/>
-            <mapper type="identity"/>
-        </apply>
     </target>
 
 
@@ -1031,12 +1063,8 @@
     </target>
 
 
-    <target name="-imgcopy" depends="-mkdirs">
-        <echo message="Copying over the unmodified images."/>
-
-        <copy todir="./${dir.publish}/${dir.images}">
-            <fileset dir="${dir.source}/${dir.images}"  includes="**/*.jpg, **/*.png"/>
-        </copy>
-    </target>
+	<!-- Import project.xml (put any custom build targets in this file so that they aren't overwritten when build.xml is updated) -->
+	<!-- See: https://github.com/h5bp/html5-boilerplate/issues/704 -->
+	<import file="./project.xml" />
 
 </project>

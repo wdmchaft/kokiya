@@ -1,238 +1,218 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en">
-    <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-        Remove this if you use the .htaccess -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>cookie呀 -- spencer &amp; emily 的呼唤</title>
-        <meta name="description" content="kokiya.com">
-        <meta name="author" content="spencer">
-        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-        <link rel="shortcut icon" href="/favicon.ico">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-        <!-- CSS: implied media="all" -->
-        <link rel="stylesheet" href="css/style.css?v=2">
-        <!-- Uncomment if you are specifically targeting less enabled mobile browsers
-        <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
-        <!--[if IE 7 ]>    
-        <link rel="stylesheet" href="css/ie.css">
-        <![endif]-->
-        <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-        <script src="js/libs/modernizr-2.0.6.js" type="text/javascript"></script>
-        <script src="js/libs/yepnope.1.0.2-min.js" type="text/javascript"></script>
-        <!--switch to mini version after develop-->
-    </head>
-    <body>
-        <div id="container">
-            <header>
-                <!--[if lt IE 8]>
-                <div class='sorry'><p>Sorry Dude...</p><p>I didn't meant to do that.</p><p>But NO support for IE6 yet.</p></div>
-                <![endif]-->
-                <h1> KOKIYA<span>.com</span></h1>
-                <aside>
-                    Like! <!--google+1 button
-                    sina share button
-                    -->
-                    <script type="text/javascript" charset="utf-8">
-                        (function() {
-                        var _w = 55, _h = 66;
-                        var param = {
-                        url : location.href,
-                        type : '1',
-                        count : '1', /**是否显示分享数，1显示(可选)*/
-                        appkey : '2285514699', /**您申请的应用appkey,显示分享来源(可选)*/
-                        title : '', /**分享的文字内容(可选，默认为所在页面的title)*/
-                        pic : '', /**分享图片的路径(可选)*/
-                        ralateUid : '', /**关联用户的UID，分享微博会@该用户(可选)*/
-                        rnd : new Date().valueOf()
-                        }
-                        var temp = [];
-                        for(var p in param ) {
-                        temp.push(p + '=' + encodeURIComponent(param[p] || ''))
-                        }
-                        document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="' + _w + '" height="' + _h + '"></iframe>')
-                        })()
-                    </script>
-                    <g:plusone size="tall"></g:plusone>
-                </aside>
-            </header>
-            <div id="main" role="main">
-                <img src='img/shadow.png' class='shadow'>
-                <section id="we">
-                    <!--if supported add html5 progress feature done
-                    use html5 localstorage or blabla to determin the value of progress bar
-                    -->
-                    <aside>
-                        <img src="img/mao.png" alt="buddy - 我们那三年" />
-                        <hr class="hbar" />
-                        <h3>作者：buddy<br />（@毛帅博）</h3>
-                        <hr class="hbar" />
-                    </aside>
-                    <hr class='vbar'/>
-                    <div>
-                        <h1>Three Years</h1>
-                        <p>
-                            回忆绝非易事。它要么过于耀眼，给现在的平凡狠狠得来一下；要么过于窘迫，至今依旧使人脸红；或者干脆，你根本就没记得过。
-                        </p>
-                        <p>
-                            然而，无论难易，过眼的云烟，不仅仅化成了云烟。即便在旅途之中渐行渐远，起点渐渐模糊，甚至消失于视野之外；蓦然回首之时，你依旧能知道你身后的风光。
-                        </p>
-                        <p>
-                            回忆绝非易事。希望记得的，会忘记；不想提及的，总被想起。时间操控了一切。所有的未来，都是未知的变数；所有的过去，都是肯定的命运。因为已经，所以一定。
-                        </p>
-                        <p>
-                            回忆绝非易事。直到你翻出相机，一张张的读过照片，所有的真挚，所有的快乐，所有的辛酸，所有的哭泣，一张张的呈现在你的眼前：“崇明中学”，“黯”，“日天”，“jone”，“小鹤”，“水池里的调羹”，“操场的单杠”，“践行楼”，“天使爱美丽”，“耿慧慧”，“埋头做卷子的黑影”…………灿烂的、锈迹斑斑的、青涩的、沉默的、“沙沙”的、苦逼的、冲动的…………一切都疾驰而过，伴着呐喊和呼唤。
-                        </p>
-                        <p>
-                            远去……
-                        </p>
-                        <p>
-                            茅的《我们那三年》正是这样。墨香中点缀着神韵，点点铺开，恰似在旅途中随意拍摄的风景：正因为不曾在意，才显得如此唯一。
-                        </p>
-                        <p>
-                            也许你是文中的提及一员，置身画卷的感觉应该不错；
-                        </p>
-                        <p>
-                            也许你不是什么“不知道什么”中学的一份子，也不认识上面提到的所有人，哦，我忘了告诉你，那些花儿都不曾存在过，这其实只是一部小说，并且，你也许就是其中的一员，谁没有一个牛逼闪闪的过去呢？
-                        </p>
-                        <h6> by Spencer </h6>
-                    </div>
-                    <section>
-                        <nav>
-                            <button>
-                                previous
-                            </button>
-                            <button>
-                                next
-                            </button>
-                        </nav>
-                        <article>
-                            <p>
-                                Loading
-                            </p>
-                        </article>
-                        <div id="disqus_thread"></div>
-                        <script type="text/javascript">
-                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                            var disqus_shortname = 'kky'; // required: replace example with your forum shortname
-                            
-                            // The following are highly recommended additional parameters. Remove the slashes in front to use.
-                            // var disqus_identifier = 'unique_dynamic_id_1234';
-                            var disqus_url = 'http://kokiya.com';
-                            
-                            /* * * DON'T EDIT BELOW THIS LINE * * */
-                            (function() {
-                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                            })();
-                        </script>
-                        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-                    </section>
-                    <br class='clear'/>
-                </section>
-                <section id="wedding">
-                    <aside>
-                        <a href="http://kokiya.com/wedding"><img src="img/wedding.png" alt="Spencer & Emily's Wedding Site" title="Spencer & Emily's Wedding Site" /></a>
-                    </aside>
-                    <div>
-                        <h1>The Ring</h1>
-                        <p>
-                            真实有很多种。
-                        </p>
-                        <p>
-                            或痛楚，有如脚底的尖石。
-                        </p>
-                        <p>
-                            或坚硬，有如指间的金属勒出深痕。
-                        </p>
-                        <p>
-                            或如收获，果实低垂，浸润了雨露；
-                        </p>
-                        <p>
-                            或如生命，潮湿的呼吸浅浅深深。
-                        </p>
-                        <p>
-                            那枚戒指，出生在矿砂里。粗糙的碾磨，磨不走它坚硬的本质。它被淘沙，被熔炼，被淬火，被锻造，被镀染，被烙印，被镶嵌。它稳妥地圈着手指，闪烁着诱人的银白色。它，如此真实。
-                        </p>
-                        <p>
-                            而我们，也希望获得它的真实感。在人海中荡涤，被选择，被碰撞，被考验，被糅合，被铭刻，最后分不清彼此。
-                        </p>
-                        <p>
-                            常常以为金属，才是真实的存在，不曾去想它被熔融的结局。
-                        </p>
-                        <p>
-                            然而，熔融的情感难道不早已褪去了虚幻？永恒地存在。
-                        </p>
-                        <h6>by Emily</h6>
-                    </div>
-                    <hr class='vbar'/>
-                </section>
-            </div>
-            <img src='img/shadow.png' class='shadow'>
-            <footer>
-                <!--<a href="http://html5boilerplate.com/" title="html5 - boilerplate">★</a>-->
-                <a href="http://www.w3.org/html/logo/"><img    src="img/HTML5_1Color_White.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered"></a>
-                <!--<a href="http://www.modernizr.com/"><img src="http://www.modernizr.com/i/img/logo-x12.png" width="75" height="36" alt="Modernizr" title="Modernizr html5检测库" /></a>
-                add href later
-                <a>作者</a>
-                <a>关于kokiya</a>-->
-            </footer>
-        </div>
-        <!--! end of #container -->
-        <!-- JavaScript at the bottom for fast page loading -->
-        <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-        <script
-        src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
-        type="text/javascript"></script>
-        <script type="text/javascript">window.jQuery || document.write("<script src='js/libs/jquery-1.6.2.min.js'>\x3C/script>")</script>
-            <!-- scripts concatenated and minified via ant build script-->
-            <script src="js/plugins.js" type="text/javascript"></script>
-            <script src="js/script.js" type="text/javascript"></script>
-            <!--google +1 button scripts-->
-            <script type="text/javascript">
-                window.___gcfg = {
-                lang : 'zh-CN'
-                };
-                (function() {
-                var po = document.createElement('script');
-                po.type = 'text/javascript';
-                po.async = true;
-                po.src = 'https://apis.google.com/js/plusone.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(po, s);
-                })();
-                
-            </script>
-            <!-- end scripts-->
-            <!--[if lt IE 7 ]>
-            <script src="js/libs/dd_belatedpng.js"></script>
-            <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
-            <![endif]-->
-            <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
-            <script type="text/javascript">
-                var _gaq = _gaq || [];
-                _gaq.push(['_setAccount', 'UA-22188974-1']);
-                _gaq.push(['_trackPageview']);
-                (function() {
-                var ga = document.createElement('script');
-                ga.type = 'text/javascript';
-                ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(ga, s);
-                })();
-                
-            </script>
-        </body>
-        </html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8">
+
+   <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+   More info: h5bp.com/b/378 -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+   <title>Kokiya - Life Coder</title>
+   <meta name="description" content="包含了毛冠军的《我们那三年》，Spencer和Emily的单挑结果，一个web技术的博客，一个准妈妈的小故事，是啊～一切都是这么的欢乐">
+   <!-- Mobile viewport optimized: h5bp.com/viewport -->
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+   <link href='http://fonts.googleapis.com/css?family=Tulpen+One' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" href="css/style.css" type="text/css">
+   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+   <!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
+   Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects; 
+   for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ -->
+   <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+   <header class="row">
+      <!-- logo -->
+      <div class="span8 offset2">
+         <h1>KOKIYA</h1>
+      </div>
+
+      <div class="span3 offset1">
+         <h2>LIFE</h2>
+         <h2>CODER</h2>
+      </div>
+   </header>
+
+   <div role="main" class="row" id="main">
+
+
+<!-- add sub title for each content -->
+      <article id="kolumn" class="kolumn span-one-third">
+         <span style="background:url('img/kolumn.png') no-repeat center center;" class="figure kolumn" alt="kolumn"></span>
+         <h3>Kolumn</h3>
+         <div class="articleContent">
+            <p>
+               帮助您的网站快速添加分栏效果
+            </p>
+            <p>
+               Kolumn是一个使用css3 multi-column属性，快速为网站添加分栏效果的，第三方Javascript插件。
+            </p>
+            <p>
+               使用简单几行代码，为您的读者增加分栏阅读的选择。
+            </p>
+            <p>
+               支持所有现代浏览器，不影响不支持该属性的浏览器
+            </p>
+            <p>
+               看看它是如何工作的
+            </p>
+         </div>
+      </article>
+
+      <article id="we" class="we span-one-third">
+         <span style="background:url('img/mao.png') no-repeat center center;" class="figure we" alt="我们那三年"></span>
+         <h3>Three Years</h3>
+         <div class="articleContent">
+            <p>
+                回忆绝非易事。它要么过于耀眼，给现在的平凡狠狠得来一下；要么过于窘迫，至今依旧使人脸红；或者干脆，你根本就没记得过。
+            </p>
+            <p>
+                然而，无论难易，过眼的云烟，不仅仅化成了云烟。即便在旅途之中渐行渐远，起点渐渐模糊，甚至消失于视野之外；蓦然回首之时，你依旧能知道你身后的风光。
+            </p>
+            <p>
+                回忆绝非易事。希望记得的，会忘记；不想提及的，总被想起。时间操控了一切。所有的未来，都是未知的变数；所有的过去，都是肯定的命运。因为已经，所以一定。
+            </p>
+            <p>
+                回忆绝非易事。直到你翻出相机，一张张的读过照片，所有的真挚，所有的快乐，所有的辛酸，所有的哭泣，一张张的呈现在你的眼前：“崇明中学”，“黯”，“日天”，“jone”，“小鹤”，“水池里的调羹”，“操场的单杠”，“践行楼”，“天使爱美丽”，“耿慧慧”，“埋头做卷子的黑影”…………灿烂的、锈迹斑斑的、青涩的、沉默的、“沙沙”的、苦逼的、冲动的…………一切都疾驰而过，伴着呐喊和呼唤。
+            </p>
+            <p>
+                远去……
+            </p>
+            <p>
+                茅的《我们那三年》正是这样。墨香中点缀着神韵，点点铺开，恰似在旅途中随意拍摄的风景：正因为不曾在意，才显得如此唯一。
+            </p>
+            <p>
+                也许你是文中的提及一员，置身画卷的感觉应该不错；
+            </p>
+            <p>
+                也许你不是什么“不知道什么”中学的一份子，也不认识上面提到的所有人，哦，我忘了告诉你，那些花儿都不曾存在过，这其实只是一部小说，并且，你也许就是其中的一员，谁没有一个牛逼闪闪的过去呢？
+            </p>
+         </div>
+      </article>
+
+      <article id="wedding" class="wedding span-one-third">
+         <span style="background:url('img/wedding.png') no-repeat center center;" class="figure wedding" alt="wedding"></span>
+         <h3>The Ring</h3>
+         <div class="articleContent">
+            <p>
+                真实有很多种。
+            </p>
+            <p>
+                或痛楚，有如脚底的尖石。
+            </p>
+            <p>
+                或坚硬，有如指间的金属勒出深痕。
+            </p>
+            <p>
+                或如收获，果实低垂，浸润了雨露；
+            </p>
+            <p>
+                或如生命，潮湿的呼吸浅浅深深。
+            </p>
+            <p>
+                那枚戒指，出生在矿砂里。粗糙的碾磨，磨不走它坚硬的本质。它被淘沙，被熔炼，被淬火，被锻造，被镀染，被烙印，被镶嵌。它稳妥地圈着手指，闪烁着诱人的银白色。它，如此真实。
+            </p>
+            <p>
+                而我们，也希望获得它的真实感。在人海中荡涤，被选择，被碰撞，被考验，被糅合，被铭刻，最后分不清彼此。
+            </p>
+            <p>
+                常常以为金属，才是真实的存在，不曾去想它被熔融的结局。
+            </p>
+            <p>
+                然而，熔融的情感难道不早已褪去了虚幻？永恒地存在。
+            </p>
+         </div>
+      </article>
+
+   </div>
+
+   <hr class="Glyph">
+
+   <footer class="row">
+      
+
+      <div class="span3 offset7">
+         <ul class="unstyled">
+         <li>Blogs Hosting</li>
+            <ul class="unstyled">
+               <li>
+                  <a href="http://spencer.kokiya.com" title="关于Kokiya.com - By Spencer " data-content="好吧，你赢了，这玩意儿几乎不官方">官方Blog</a>
+               </li>
+               <li>
+                  <a href="http://emily.kokiya.com" title="Emily同学的blog" data-content="每天看着看着就睡着是最幸福的事啊">TIMI不Timid</a>
+               </li>
+            </ul>
+         </ul>
+      </div>
+      <div class="span3">
+         <ul class="unstyled">
+            <li>Extras</li>
+            <ul class="unstyled">
+               <li>
+                  <a href="http://m.kokiya.com" title="移动kokiya - 关机不打烊" data-content="m.kokiya.com">Mobile</a>
+               </li>
+               <li>
+                  <a href="http://kokiya.com/labs" title="Spencer的实验室" data-content="主要的特点是防爆">Labs</a>
+               </li>
+            </ul>
+         </ul>
+      </div>
+      <div class="span3">
+         <ul class="unstyled">
+            <li>By</li>
+            <ul class="unstyled">
+               <li>
+                  <a href="mailto:sepmein@gmail.com" title="给Spencer写一封Email" data-content="点一下可就真的发了哟">Spencer&nbsp;Zhang</a>
+               </li>
+            </ul>
+         </ul>
+      </div>
+
+   </footer>
+<div>
+
+
+<!-- JavaScript at the bottom for fast page loading -->
+
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+
+<!-- scripts concatenated and minified via build script -->
+<script defer src="js/plugins.js"></script>
+<script defer src="js/script.js"></script> 
+
+<!-- end scripts -->
+
+
+<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+   mathiasbynens.be/notes/async-analytics-snippet -->
+   <script>
+      var _gaq=[['_setAccount','UA-28326426-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+   </script>
+
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+chromium.org/developers/how-tos/chrome-frame-getting-started -->
+<!--[if lt IE 7 ]>
+<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+
+</body>
+</html>
