@@ -244,6 +244,8 @@ div.wrapbox{
   overflow : hidden;
   width : 960px;
   display: none;
+  margin-top: 60px;
+  background-color: grey;
 
 }
 
@@ -273,9 +275,9 @@ div.sliderbox div{
    float : left;
    position : relative;
    width : 960px;
+   padding-top : 20px;
 
 }
-
 
 /* hr bar from css-trick */
 
