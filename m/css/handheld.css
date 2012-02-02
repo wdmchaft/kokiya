@@ -1,0 +1,31 @@
+﻿div h1,h2,h3,h4,h5,h6,p{
+	font-family: \5FAE\8F6F\96C5\9ED1,serif,\5B8B\4F53,\9ED1\4F53,\534E\6587\5B8B\4F53,\534E\6587\9ED1\4F53;
+}
+#trintro{
+	display:none;
+}
+article>h1{
+	text-align:center;
+}
+article>h6{
+	text-align:right;
+}
+article>p{
+	text-indent:2em;
+}
+#trintro p{
+	text-align:center;
+	text-indent:0em;
+}
+/*改变ty导航button的样式
+* 由于jQm中由js生成了button的div，而其不可见，故改变样式要找到div
+* TODO:考虑将button与滚动事件绑定，向下滚动时，随文档上滚后悬停顶部
+*/
+#threeyears nav>div{
+	position:fixed;
+	opacity:0.6;
+/*	top:50px;*/
+}
+#threeyears nav>div:last-of-type{
+	right:10px;
+} 
